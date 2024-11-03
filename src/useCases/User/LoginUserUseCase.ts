@@ -30,7 +30,7 @@ export class LoginUserUseCase implements IUseCase<UserLoginInputDTO, UserLoginOu
       throw new Error('Invalid email or password');
     }
 
-    const token = this.tokenService.generateToken({ userId: user.id });
+    const token = this.tokenService.generateToken({ userId: user.id.getValue() });
     return { token };
   }
 }
