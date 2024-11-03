@@ -6,3 +6,5 @@ coverage
 dist
 .drawio
 .http
+package-lock.json
+yarn.lock
