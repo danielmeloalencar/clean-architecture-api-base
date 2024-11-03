@@ -1,5 +1,6 @@
+import { Id } from '../_shared/Id';
 import { Email } from './User.Email';
-import { Id } from './User.Id';
+
 import { Name } from './User.Name';
 import { Password } from './User.Password';
 

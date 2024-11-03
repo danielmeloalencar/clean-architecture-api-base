@@ -1,7 +1,7 @@
 import * as crypto from 'crypto';
 
 export class Id {
-  private constructor(private idValue: string) {}
+  private constructor(private value: string) {}
 
   static create(id?: string): Id {
     if (!id) {
@@ -9,7 +9,7 @@ export class Id {
     }
 
     if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[4][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(id)) {
-      throw new Error('User id must be a valid UUID');
+      throw new Error('Id must be a valid UUID');
     }
 
     return new Id(id);
@@ -20,6 +20,6 @@ export class Id {
   }
 
   getValue(): string {
-    return this.idValue;
+    return this.value;
   }
 }

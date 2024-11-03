@@ -1,8 +1,8 @@
-import { Id } from './User.Id';
 import { Name } from './User.Name';
 import { Email } from './User.Email';
 import { Password } from './User.Password';
 import { User } from './User.Entity';
+import { Id } from '../_shared/Id';
 
 describe('User Entity', () => {
   it('should create a valid user', () => {
@@ -21,7 +21,7 @@ describe('User Entity', () => {
   });
 
   it('should throw an error if user id is invalid', () => {
-    expect(() => Id.create('invalid-uuid')).toThrow('User id must be a valid UUID');
+    expect(() => Id.create('invalid-uuid')).toThrow('Id must be a valid UUID');
   });
 
   it('should throw an error if user name is empty', () => {

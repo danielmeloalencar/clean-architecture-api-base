@@ -1,6 +1,6 @@
+import { Id } from '../../entities/_shared/Id';
 import { Email } from '../../entities/User/User.Email';
 import { User } from '../../entities/User/User.Entity';
-import { Id } from '../../entities/User/User.Id';
 import { Name } from '../../entities/User/User.Name';
 import { Password } from '../../entities/User/User.Password';
 import { IUserRepository } from '../../repositories/interfaces/IUserRepository';
