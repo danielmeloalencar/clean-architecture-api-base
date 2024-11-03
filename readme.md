@@ -77,14 +77,108 @@ Com base no código fonte, vou explicar como o projeto implementa os princípios
    - Interfaces definem contratos
    - Implementações concretas dependem de abstrações
 
-## 🚀 Instalação
+## 🛠️ CLI Embutido
+
+O projeto inclui um CLI (Command Line Interface) para facilitar a geração de novos serviços, entidades e rotas. Este CLI ajuda a manter a consistência do código e acelera o desenvolvimento.
+
+### Vantagens de Usar o CLI
+
+- **Consistência**: Garante que todos os arquivos gerados sigam o mesmo padrão.
+- **Produtividade**: Reduz o tempo necessário para criar novos componentes.
+- **Facilidade de Uso**: Interface interativa que guia o desenvolvedor durante o processo de geração.
+
+## Como usar
+
+Após a instalação do projeto execute o comando
+
+```sh
+# com NPM
+npm run cli
+# com Yarn
+yarn cli
+```
+
+Siga as instruções na tela ( use as setas do teclado)
+
+![alt text](assets/image.png)
+
+## 🚀 Instalação das dependências
+
+```sh
+# com NPM
+npm install
+# com Yarn
+yarn
+```
+
+## 🐳 Construindo e Executando com Docker
+
+Para construir e executar o projeto utilizando Docker, siga os passos abaixo:
+
+### Passo 1: Construir a Imagem Docker
+
+```sh
+docker compose build
+```
+
+### Passo 2: Executar os Containers
+
+```sh
+docker compose up
+```
+
+## 🗄️ Configuração do Prisma
+
+Prisma é utilizado como ORM (Object-Relational Mapping) para interagir com o banco de dados de forma eficiente e tipada.
+
+### Passo 1: Instalar as Dependências do Prisma
+
+```sh
+# com NPM
+npm install @prisma/client
+npm install prisma --save-dev
+
+# com Yarn
+yarn add @prisma/client
+yarn add prisma --dev
+```
+
+### Passo 2: Inicializar o Prisma
+
+```sh
+npx prisma init
+```
+
+### Passo 3: Configurar o `schema.prisma`
+
+Edite o arquivo `prisma/schema.prisma` para definir seu modelo de dados.
+
+### Passo 4: Executar Migrações
+
+```sh
+npx prisma migrate dev
+```
+
+### Passo 5: Gerar o Cliente Prisma
+
+```sh
+npx prisma generate
+```
+
+### Passo 6:
+
+```sh
+npx prisma studio
+```
+
+### Visualizar Banco de Dados
+
+Acesse http://localhost:5555/
 
 ### Pré-requisitos
 
 - Node.js 21.5.0
 - Docker e Docker Compose
-
-### Passos
 
 ## 🐳 Ambiente Docker
 
