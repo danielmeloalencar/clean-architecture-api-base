@@ -1,0 +1,8 @@
+import { {{name}}Controller } from '../controllers/{{name}}Controller';
+import { IHttpServer } from '../services/httpService/IHttpServer';
+
+const {{nameLower}}Controller = new {{name}}Controller();
+
+export function {{nameLower}}Routes(server: IHttpServer) {
+  server.post('/{{nameLower}}', (req, res) => {{nameLower}}Controller.handle(req, res));
+}

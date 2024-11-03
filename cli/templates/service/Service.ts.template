@@ -1,0 +1,5 @@
+import { I{{name}}Service } from './I{{name}}Service';
+
+export class {{name}}Service implements I{{name}}Service {
+  // Implementação dos métodos do serviço
+}

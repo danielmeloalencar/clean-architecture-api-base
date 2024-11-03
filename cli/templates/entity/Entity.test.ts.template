@@ -1,0 +1,8 @@
+import { {{name}} } from './{{name}}.Entity';
+
+describe('{{name}} Entity', () => {
+  it('should create a valid {{name}}', () => {
+    const entity = new {{name}}({});
+    expect(entity).toBeInstanceOf({{name}});
+  });
+});

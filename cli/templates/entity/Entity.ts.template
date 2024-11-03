@@ -1,0 +1,5 @@
+export class {{name}} {
+  constructor(private props: unknown) {}
+
+  // Defina os métodos e propriedades da entidade aqui
+}

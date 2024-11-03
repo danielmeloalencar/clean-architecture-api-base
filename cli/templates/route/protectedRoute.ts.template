@@ -1,0 +1,9 @@
+import { {{name}}Controller } from '../controllers/{{name}}Controller';
+import { AuthMiddleware } from '../services/httpService/AuthMiddleware';
+import { IHttpServer } from '../services/httpService/IHttpServer';
+
+const {{nameLower}}Controller = new {{name}}Controller();
+
+export function {{nameLower}}Routes(server: IHttpServer) {
+  server.post('/{{nameLower}}', AuthMiddleware((req, res) => {{nameLower}}Controller.handle(req, res)));
+}

@@ -1,0 +1,15 @@
+import { IHttpRequest, IHttpResponse } from '../services/httpService/IHttpServer';
+
+export class {{name}}Controller {
+  async handle(req: IHttpRequest, res: IHttpResponse): Promise<void> {
+    try {
+      // Implemente a lógica do controller aqui
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(400).send({ error: error.message });
+      } else {
+        res.status(400).send({ error: 'Unknown error' });
+      }
+    }
+  }
+}
