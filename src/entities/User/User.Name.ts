@@ -3,7 +3,7 @@ export class Name {
 
   static create(name: string): Name {
     if (!name) {
-      throw new Error('User email is required');
+      throw new Error('User name is required');
     }
     return new Name(name);
   }

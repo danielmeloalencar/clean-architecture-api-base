@@ -25,7 +25,7 @@ describe('User Entity', () => {
   });
 
   it('should throw an error if user name is empty', () => {
-    expect(() => Name.create('')).toThrow('User email is required');
+    expect(() => Name.create('')).toThrow('User name is required');
   });
 
   it('should throw an error if user email is empty', () => {
