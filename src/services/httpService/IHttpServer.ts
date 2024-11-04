@@ -1,5 +1,8 @@
 export interface IHttpServer {
   post(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void;
+  put(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void;
+  get(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void;
+  delete(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void;
   listen(port: number, callback: () => void): void;
 }
 
