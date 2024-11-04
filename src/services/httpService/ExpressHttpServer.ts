@@ -26,6 +26,29 @@ export class ExpressHttpServer implements IHttpServer {
   constructor(private express: Express) {
     this.express.use(json());
   }
+  put(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
+    this.express.put(route, (request, response) => {
+      const req = new ExpressHttpRequest(request);
+      const res = new ExpressHttpResponse(response);
+      handler(req, res);
+    });
+  }
+
+  get(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
+    this.express.get(route, (request, response) => {
+      const req = new ExpressHttpRequest(request);
+      const res = new ExpressHttpResponse(response);
+      handler(req, res);
+    });
+  }
+
+  delete(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
+    this.express.delete(route, (request, response) => {
+      const req = new ExpressHttpRequest(request);
+      const res = new ExpressHttpResponse(response);
+      handler(req, res);
+    });
+  }
 
   post(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
     this.express.post(route, (request, response) => {

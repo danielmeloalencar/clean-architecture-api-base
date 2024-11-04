@@ -24,6 +24,28 @@ class FastifyHttpResponse implements IHttpResponse {
 
 export class FastifyHttpServer implements IHttpServer {
   constructor(private fastify: FastifyInstance) {}
+  put(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
+    this.fastify.put(route, (request, reply) => {
+      const req = new FastifyHttpRequest(request);
+      const res = new FastifyHttpResponse(reply);
+      handler(req, res);
+    });
+  }
+
+  get(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
+    this.fastify.get(route, (request, reply) => {
+      const req = new FastifyHttpRequest(request);
+      const res = new FastifyHttpResponse(reply);
+      handler(req, res);
+    });
+  }
+  delete(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
+    this.fastify.delete(route, (request, reply) => {
+      const req = new FastifyHttpRequest(request);
+      const res = new FastifyHttpResponse(reply);
+      handler(req, res);
+    });
+  }
 
   post(route: string, handler: (req: IHttpRequest, res: IHttpResponse) => void): void {
     this.fastify.post(route, (request, reply) => {
