@@ -9,6 +9,7 @@ export interface IHttpRequest {
     authorization?: string;
   };
   user?: unknown; // Adicionando a propriedade user para armazenar o usuário decodificado
+  params?: { [key: string]: string };
 }
 
 export interface IHttpResponse {
