@@ -7,7 +7,7 @@ Host: localhost:3000
 
 {
   "email": "daniel2@example.com",
-  "password": "Daniel@1987",
+  "password": "Daniel@12345",
   "name": "Daniel2"
 }
 
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 {
   "email": "daniel2@example.com",
-  "password": "Daniel@1987"
+  "password": "Daniel@12345"
 }
 
 
